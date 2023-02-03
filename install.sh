@@ -7,6 +7,9 @@ set -e
 # I hope it'll work adequatly on common Linux distribuitions, and Mac. Mac users
 # also have the Homebrew option. This installer does /not/ try to install with
 # homebrew.
+#
+# Ideally, I would write this script with `#!/usr/bin/env sh` rather than bash.
+# But starting with something is better than nothing.
 
 install_babashka() {
     local dry_run="$1"
