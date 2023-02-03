@@ -208,6 +208,16 @@ hr {
     line-height: 2em;
 }
 
+#rustup-message {
+    font-size: 16px;
+    line-height: 2em;
+}
+
+#smalltext {
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
 #rustup-msg {
     font-size: 16px;
     line-height: 2em;
