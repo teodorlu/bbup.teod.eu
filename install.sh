@@ -13,7 +13,7 @@ install_babashka() {
         bash <(curl https://raw.githubusercontent.com/babashka/babashka/master/install)
     else
        # dry run
-       echo -n ""
+       echo "install babashka, dry run"
     fi
 }
 
@@ -36,11 +36,9 @@ install_bbin() {
         # We need to add $HOME/.babashka/bbin/bin to PATH!
     else
        # dry run
-       echo -n ""
+       echo "install bbin, dry run"
     fi
 }
-
-echo "$@"
 
 # Just pass args into subcommands
 install_babashka "$@"
