@@ -1,35 +1,35 @@
-@font-face {
-    font-family: 'Fira Sans';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Fira Sans Light'), url("fonts/FiraSans-Light.woff") format('woff');
-}
-@font-face {
-    font-family: 'Fira Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Fira Sans'), url("fonts/FiraSans-Regular.woff") format('woff');
-}
-@font-face {
-    font-family: 'Fira Sans';
-    font-style: normal;
-    font-weight: 500;
-    src: local('Fira Sans Medium'), url("fonts/FiraSans-Medium.woff") format('woff');
-}
+/* @font-face { */
+/*     font-family: 'Fira Sans'; */
+/*     font-style: normal; */
+/*     font-weight: 300; */
+/*     src: local('Fira Sans Light'), url("fonts/FiraSans-Light.woff") format('woff'); */
+/* } */
+/* @font-face { */
+/*     font-family: 'Fira Sans'; */
+/*     font-style: normal; */
+/*     font-weight: 400; */
+/*     src: local('Fira Sans'), url("fonts/FiraSans-Regular.woff") format('woff'); */
+/* } */
+/* @font-face { */
+/*     font-family: 'Fira Sans'; */
+/*     font-style: normal; */
+/*     font-weight: 500; */
+/*     src: local('Fira Sans Medium'), url("fonts/FiraSans-Medium.woff") format('woff'); */
+/* } */
 
-@font-face {
-    font-family: 'Fira Mono';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Fira Mono'), url("fonts/FiraMono-Regular.ttf") format('truetype');
-}
+/* @font-face { */
+/*     font-family: 'Fira Mono'; */
+/*     font-style: normal; */
+/*     font-weight: 400; */
+/*     src: local('Fira Mono'), url("fonts/FiraMono-Regular.ttf") format('truetype'); */
+/* } */
 
-@font-face {
-    font-family: 'Work Sans';
-    font-style: normal;
-    font-weight: 500;
-    src: local('Work Sans Medium'), url("fonts/WorkSans-Medium.ttf") format('truetype');
-}
+/* @font-face { */
+/*     font-family: 'Work Sans'; */
+/*     font-style: normal; */
+/*     font-weight: 500; */
+/*     src: local('Work Sans Medium'), url("fonts/WorkSans-Medium.ttf") format('truetype'); */
+/* } */
 
 body {
     margin-top: 2em;
@@ -207,6 +207,12 @@ hr {
     font-size: 16px;
     line-height: 2em;
 }
+
+#rustup-msg {
+    font-size: 16px;
+    line-height: 2em;
+}
+
 
 #about > img {
     width: 30px;
