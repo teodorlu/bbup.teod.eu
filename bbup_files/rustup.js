@@ -1,6 +1,6 @@
 // IF YOU CHANGE THIS FILE IT MUST BE CHANGED ON BOTH rust-www and rustup.rs
 
-var platforms = ["default", "unknown", "win32", "win64", "unix"];
+var platforms = ["default", "unknown", "unix"];
 var platform_override = null;
 var rustup_install_command = "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh";
 
