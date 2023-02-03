@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # This installer sets up Babashka and Babashka/bbin without homebrew.
 #
 # I hope it'll work adequatly on common Linux distribuitions, and Mac. Mac users
