@@ -9,20 +9,17 @@
 install_babashka() {
     local dry_run="$1"
     if [[ -z "$dry_run" ]]; then
+        # Defer to default "babashka manual install"
+        bash <(curl https://raw.githubusercontent.com/babashka/babashka/master/install)
+    else
        # dry run
        echo -n ""
-    else
-    # Defer to default "babashka manual install"
-    bash <(curl https://raw.githubusercontent.com/babashka/babashka/master/install)
     fi
 }
 
 install_bbin() {
     local dry_run="$1"
     if [[ -z "$dry_run" ]]; then
-       # dry run
-       echo -n ""
-    else
         # TODO get version first, then download that version
         mkdir -p ~/.babashka/bbin/bin && curl -o- -L https://raw.githubusercontent.com/babashka/bbin/v0.1.2/bbin > ~/.babashka/bbin/bin/bbin && chmod +x ~/.babashka/bbin/bin/bbin
         # TODO sanely add to PATH -- check first if we need to.
@@ -37,8 +34,13 @@ install_bbin() {
         #   echo 'export PATH="$PATH:$HOME/.babashka/bbin/bin"' >> ~/.$(basename $SHELL)rc && exec $SHELL
         #
         # We need to add $HOME/.babashka/bbin/bin to PATH!
+    else
+       # dry run
+       echo -n ""
     fi
 }
+
+echo "$@"
 
 # Just pass args into subcommands
 install_babashka "$@"
