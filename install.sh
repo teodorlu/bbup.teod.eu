@@ -30,5 +30,6 @@ install_bbin() {
     # We need to add $HOME/.babashka/bbin/bin to PATH!
 }
 
-install_babashka
-install_bbin
+# Just pass args into subcommands
+install_babashka "$@"
+install_bbin "$@"
