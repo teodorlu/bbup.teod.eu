@@ -15,7 +15,7 @@ install_babashka() {
         bash <(curl https://raw.githubusercontent.com/babashka/babashka/master/install)
     else
        # dry run
-       echo "install babashka, dry run"
+       echo "Would run:" "bash <(curl https://raw.githubusercontent.com/babashka/babashka/master/install)"
     fi
 }
 
@@ -38,7 +38,11 @@ install_bbin() {
         # We need to add $HOME/.babashka/bbin/bin to PATH!
     else
        # dry run
-       echo "install bbin, dry run"
+       echo "Would run:" "mkdir -p ~/.babashka/bbin/bin && curl -o- -L https://raw.githubusercontent.com/babashka/bbin/v0.1.2/bbin > ~/.babashka/bbin/bin/bbin && chmod +x ~/.babashka/bbin/bin/bbin"
+
+       # do we need to add the folder to path?
+       # let's check
+
     fi
 }
 
