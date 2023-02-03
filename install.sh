@@ -37,12 +37,27 @@ install_bbin() {
         #
         # We need to add $HOME/.babashka/bbin/bin to PATH!
     else
-       # dry run
-       echo "Would run:" "mkdir -p ~/.babashka/bbin/bin && curl -o- -L https://raw.githubusercontent.com/babashka/bbin/v0.1.2/bbin > ~/.babashka/bbin/bin/bbin && chmod +x ~/.babashka/bbin/bin/bbin"
+        # dry run
+        echo "Would run:" "mkdir -p ~/.babashka/bbin/bin && curl -o- -L https://raw.githubusercontent.com/babashka/bbin/v0.1.2/bbin > ~/.babashka/bbin/bin/bbin && chmod +x ~/.babashka/bbin/bin/bbin"
 
-       # do we need to add the folder to path?
-       # let's check
+        # do we need to add the folder to path?
+        # let's check
+        # TODO I think this is bash-only functionality, not Posix SH.
 
+        if [[ ":$PATH:" == *":$HOME/.babashka/bbin/bin:"* ]]; then
+            echo "Your path is correctly set"
+                echo "Found \"$HOME/.babashka/bbin/bin\" on PATH, no changes required."
+        else
+            echo ""
+            if [[ "$(basename $SHELL)" == "bash" ]]; then
+                echo "Would run:" "echo 'export PATH=\"$HOME/.babashka/bbin/bin\" >> $HOME/.bashrc"
+            elif [[ "$(basename $SHELL)" == "zsh" ]]; then
+                echo "Would run:" "echo 'export PATH=\"$HOME/.babashka/bbin/bin\" >> $HOME/.zshrc"
+            else
+                echo "Cannot decide what to do with your shell: $SHELL"
+                echo "Please add \"$HOME/.babashka/bbin/bin\" to PATH manually."
+            fi
+        fi
     fi
 }
 
