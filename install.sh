@@ -44,31 +44,31 @@ install_bbin() {
             modification='export PATH="$HOME/.babashka/bbin/bin"'
 
             echo "bbup has detected that you are running $shell_name"
-            echo "Would you like to add"
+            echo "Adding"
             echo ""
             echo "    $modification"
             echo ""
-            read -p "to $HOME/.bashrc? [Y/n] " modify
-
-            if [[ "$modify" == "Y" || "$modify" == "" ]]; then
-                echo "$modification" >> "$HOME/.bashrc"
-            fi
+            echo -n "to $HOME/.bashrc ..."
+            echo "$modification" >> "$HOME/.bashrc"
+            echo "Done!"
         elif [[ "$shell_name" == "zsh" ]]; then
             modification='export PATH="$HOME/.babashka/bbin/bin"'
 
             echo "bbup has detected that you are running $shell_name"
-            echo "Would you like to add"
+            echo "Adding"
             echo ""
             echo "    $modification"
             echo ""
-            read -p "to $HOME/.zshrc? [Y/n] " modify
-
-            if [[ "$modify" == "Y" || "$modify" == "" ]]; then
-                echo "$modification" >> "$HOME/.zshrc"
-            fi
+            echo -n "to $HOME/.bashrc ..."
+            echo "$modification" >> "$HOME/.bashrc"
+            echo "Done!"
         else
             echo "Cannot decide what to do with your shell: $SHELL"
             echo "Please add \"$HOME/.babashka/bbin/bin\" to PATH manually."
+            echo ""
+            echo "    $HOME/.babashka/bbin/bin"
+            echo ""
+            echo "to PATH manually."
         fi
     fi
 }
