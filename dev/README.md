@@ -1,11 +1,11 @@
 # Developing
 
-Dry run on your own machine:
+You can use `--dry-run` to run bbup without installing anything:
 
-    bash install.sh --dry-run
+    $ bash install.sh --dry-run
 
-Try a "real install" with Docker:
+Try a "real install" with the Dockerfile in this folder:
 
-    $ docker build -t tmp . && docker run --rm -it tmp
-    # then, from inside the docker container
-    $ curl --proto '=https' --tlsv1.2 -sSf https://bbup.teod.eu/install.sh | sh
+    $ docker build -f big.dockerfile -t tmp . && docker run --rm -it tmp
+    
+    
