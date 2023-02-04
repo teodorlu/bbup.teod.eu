@@ -15,7 +15,7 @@ install_babashka() {
     local dry_run="$1"
     if [[ -z "$dry_run" ]]; then
         # Defer to default "babashka manual install"
-        bash <(curl https://raw.githubusercontent.com/babashka/babashka/master/install)
+        bash <(curl -s https://raw.githubusercontent.com/babashka/babashka/master/install)
     else
        # dry run
        echo "Would run:" "bash <(curl https://raw.githubusercontent.com/babashka/babashka/master/install)"
