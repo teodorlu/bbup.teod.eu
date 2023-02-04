@@ -83,5 +83,15 @@ install_bbin() {
     fi
 }
 
+show_example() {
+    echo "Installation complete! You can now install babashka scripts with bbin."
+    echo "For example:"
+    echo ""
+    echo "    $ bbin install io.github.teodorlu/hello-world-bb --latest-sha"
+    echo "    [...]"
+    echo "    $ hello-world-bb"
+}
+
 install_babashka "$@"
 install_bbin "$@"
+show_example "$@"
