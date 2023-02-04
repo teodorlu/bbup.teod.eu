@@ -16,33 +16,8 @@ install_babashka() {
 }
 
 install_bbin() {
+    # TODO install latest version
     mkdir -p ~/.babashka/bbin/bin && curl -o- -L https://raw.githubusercontent.com/babashka/bbin/v0.1.2/bbin > ~/.babashka/bbin/bin/bbin && chmod +x ~/.babashka/bbin/bin/bbin
-
-    ## draft
-    #
-    # bbup detected that you are running $SHELL
-    #
-    # Babashka scripts will be installed into
-    #
-    #   "$HOME/.babashka/bbin/bin"
-    #
-    # Would you like to add
-    #
-    #   export PATH="$HOME/.babashka/bbin/bin:$PATH"
-    #
-    # to your bashrc/zshrc (Y/n)?
-
-    # If we cannot detect shell (eg fish):
-    #
-    # bbup detected that you are running $SHELL
-    #
-    # bbup does not support automatic installation for $SHELL
-    #
-    # please install yourself!
-
-    ########################################
-    #
-    #  CHECK SHELL
 
     if [[ ":$PATH:" == *":$HOME/.babashka/bbin/bin:"* ]]; then
         # do nothing
@@ -51,7 +26,7 @@ install_bbin() {
         shell_name=$(basename $SHELL)
         echo "bbup detected that you are running ${shell_name}."
 
-        # Template confirmation text:
+        # Example confirm text / behavior from pacman:
         #
         #     Packages (1) archlinux-keyring-20230130-1
         #
@@ -94,6 +69,5 @@ install_bbin() {
     fi
 }
 
-# Just pass args into subcommands
 install_babashka "$@"
 install_bbin "$@"
