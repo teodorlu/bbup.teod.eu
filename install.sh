@@ -30,8 +30,6 @@ install_bbin() {
         echo -n ""
     else
         shell_name=$(basename $SHELL)
-        echo "bbup detected that you are running ${shell_name}."
-
         # Example confirm text / behavior from pacman:
         #
         #     Packages (1) archlinux-keyring-20230130-1

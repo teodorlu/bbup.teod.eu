@@ -8,13 +8,12 @@
     Why?
     Docker is not allowed to copy files from the parent directory under
     build.
-    I choose to copy some files rather than redo the repo structure to please docker.
 
 ## Usage
 
-You can use `--dry-run` to run bbup without installing anything:
+First, copy the toplevel `install.sh` in here.
 
-    $ bash install.sh --dry-run
+    cp ../install.sh bbup-install.sh
 
 Try a "real install" with the Dockerfile in this folder:
 

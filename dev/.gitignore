@@ -1,0 +1,2 @@
+# Prevent this file being tracked doubly
+/bbup-install.sh
