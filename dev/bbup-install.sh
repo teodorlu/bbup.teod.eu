@@ -49,14 +49,44 @@ install_bbin() {
         echo -n ""
     else
         shell_name=$(basename $SHELL)
-
         echo "bbup detected that you are running ${shell_name}."
 
+        # Template confirmation text:
+        #
+        #     Packages (1) archlinux-keyring-20230130-1
+        #
+        #     Total Download Size:   1.12 MiB
+        #     Total Installed Size:  1.60 MiB
+        #     Net Upgrade Size:      0.00 MiB
+        #
+        #     :: Proceed with installation? [Y/n]
 
-        if [[ "$(basename $SHELL)" == "bash" ]]; then
-            echo "Would run:" "echo 'export PATH=\"$HOME/.babashka/bbin/bin\" >> $HOME/.bashrc"
-        elif [[ "$(basename $SHELL)" == "zsh" ]]; then
-            echo "Would run:" "echo 'export PATH=\"$HOME/.babashka/bbin/bin\" >> $HOME/.zshrc"
+        if [[ "$shell_name" == "bash" ]]; then
+            modification='export PATH="$HOME/.babashka/bbin/bin"'
+
+            echo "bbup has detected that you are running $shell_name"
+            echo "Would you like to add"
+            echo ""
+            echo "    $modification"
+            echo ""
+            read -p "to $HOME/.bashrc? [Y/n] " modify
+
+            if [[ "$modify" == "Y" || "$modify" == "" ]]; then
+                echo "$modification" >> "$HOME/.bashrc"
+            fi
+        elif [[ "$shell_name" == "zsh" ]]; then
+            modification='export PATH="$HOME/.babashka/bbin/bin"'
+
+            echo "bbup has detected that you are running $shell_name"
+            echo "Would you like to add"
+            echo ""
+            echo "    $modification"
+            echo ""
+            read -p "to $HOME/.zshrc? [Y/n] " modify
+
+            if [[ "$modify" == "Y" || "$modify" == "" ]]; then
+                echo "$modification" >> "$HOME/.zshrc"
+            fi
         else
             echo "Cannot decide what to do with your shell: $SHELL"
             echo "Please add \"$HOME/.babashka/bbin/bin\" to PATH manually."
