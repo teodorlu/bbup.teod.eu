@@ -10,6 +10,12 @@ set -e
 #
 # Ideally, I would write this script with `#!/usr/bin/env sh` rather than bash.
 # But starting with something is better than nothing.
+#
+# List of problems:
+#
+#  1. When we run the script as curl STUFF | sh, we can't use stdin to ask for
+#     confirmation.
+#     I'm guessing Rustup gets around this by launching a different process.
 
 install_babashka() {
     bash <(curl -s https://raw.githubusercontent.com/babashka/babashka/master/install)
