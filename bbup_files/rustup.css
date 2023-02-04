@@ -47,7 +47,7 @@ pre {
 
 body#idx #pitch > a {
     font-weight: 500;
-    line-height: 2em;
+    line-height: 1.8em;
 }
 
 a {
@@ -76,8 +76,8 @@ body#idx > #pitch {
 }
 
 body#idx p {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 1.8em;
+    margin-bottom: 1.8em;
 }
 
 body#idx p.other-platforms-help {
@@ -205,12 +205,12 @@ hr {
 
 #about {
     font-size: 16px;
-    line-height: 2em;
+    line-height: 1.8em;
 }
 
 #rustup-message {
     font-size: 16px;
-    line-height: 2em;
+    line-height: 1.8em;
 }
 
 #smalltext {
@@ -220,7 +220,7 @@ hr {
 
 #rustup-msg {
     font-size: 16px;
-    line-height: 2em;
+    line-height: 1.8em;
 }
 
 
