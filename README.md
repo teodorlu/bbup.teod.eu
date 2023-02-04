@@ -1,5 +1,9 @@
 # bbup.teod.eu
 
+[bbup.teod.eu]
+
+[bbup.teod.eu]: https://bbup.teod.eu/
+
 ## Developing
 
 See [./dev](./dev).
