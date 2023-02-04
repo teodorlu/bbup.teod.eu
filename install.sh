@@ -90,6 +90,7 @@ show_example() {
     echo "    $ bbin install io.github.teodorlu/hello-world-bb --latest-sha"
     echo "    [...]"
     echo "    $ hello-world-bb"
+    echo "    Hello, World!"
 }
 
 install_babashka "$@"
