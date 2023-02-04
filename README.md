@@ -10,6 +10,6 @@ See [./dev](./dev).
 
 ## Thank you
 
-This project copies heavily from [rustup]. Thank you!
+This project is based heavily on [rustup]. Thank you!
 
 [rustup]: https://rustup.rs/
