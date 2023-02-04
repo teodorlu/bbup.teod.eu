@@ -17,4 +17,8 @@ RUN pacman -S git --noconfirm
 
 # (is java supposed to be required?)
 
-RUN echo "curl --proto '=https' --tlsv1.2 -sSf https://bbup.teod.eu/install.sh | sh" > bbup.txt
+COPY bbup-install.sh bbup-install.sh
+
+RUN echo "cat bbup-install | sh" > bbup.txt
+RUN echo '# source bbup.txt' >> bbup.txt
+RUN echo '# /root/.babashka/bbin/bin/bbin' >> bbup.txt
