@@ -32,10 +32,15 @@ RUN cat bbup.txt
 # Run the installer
 RUN bash -c "source bbup.txt"
 
+# Add bbin folder to PATH
+#
+# Note: $HOME is not set when the Dockerfile runs, but will be /root when you start a terminal.
+ENV PATH="/root/.babashka/bbin/bin:$PATH"
+
 # Trigger bbin self-install
-RUN /root/.babashka/bbin/bin/bbin -h
+RUN bbin -h
 
 # Try install a script
-RUN /root/.babashka/bbin/bin/bbin install io.github.teodorlu/neil-quickadd --latest-sha
+RUN bbin install io.github.teodorlu/neil-quickadd --latest-sha
 
 # yesss
