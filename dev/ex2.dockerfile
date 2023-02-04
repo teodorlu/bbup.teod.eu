@@ -17,8 +17,8 @@ RUN pacman -S git --noconfirm
 
 # (is java supposed to be required?)
 
-COPY bbup-install.sh bbup-install.sh
+COPY bbup-install.sh run.sh
 
-RUN echo "cat bbup-install.sh | sh" > bbup.txt
+RUN echo "cat run.sh | sh" > bbup.txt
 RUN echo '# source bbup.txt' >> bbup.txt
 RUN echo '# /root/.babashka/bbin/bin/bbin' >> bbup.txt
