@@ -3,7 +3,8 @@
 ## Files
 
 - `exN.dockerfile` -- different dockerfiles for testing
-- `dev-install.sh` -- A copy of the toplevel install script, for development.
+- `Makefile` -- A command for copying `../install.sh` into `./bbup-install.sh`
+- `bbup-install.sh` -- A copy of the toplevel install script, for development.
 
     Why?
     Docker is not allowed to copy files from the parent directory under
@@ -13,7 +14,7 @@
 
 First, copy the toplevel `install.sh` in here.
 
-    cp ../install.sh bbup-install.sh
+    make
 
 Try a "real install" with the Dockerfile in this folder:
 
