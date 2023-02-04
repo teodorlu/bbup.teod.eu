@@ -22,7 +22,7 @@ Try a "real install" with the Dockerfile in this folder:
 
 There are multiple dockerfiles.
 
-| file           | does                                                                    |
+| file           | does what                                                               |
 |----------------|-------------------------------------------------------------------------|
 | ex1.dockerfile | Installs dependencies, installs bbup from web, sets up bbin and uses it |
 | ex2.dockerfile | Installs dependencies, prepares for local bbup installation             |
