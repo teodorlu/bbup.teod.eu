@@ -5,9 +5,10 @@
 - `exN.dockerfile` -- different dockerfiles for testing
 - `dev-install.sh` -- A copy of the toplevel install script, for development.
 
-    Why? Docker is not allowed to copy files from the parent directory under
-    build. I choose to copy some files rather than redo the repo structure to
-    please docker.
+    Why?
+    Docker is not allowed to copy files from the parent directory under
+    build.
+    I choose to copy some files rather than redo the repo structure to please docker.
 
 ## Usage
 
