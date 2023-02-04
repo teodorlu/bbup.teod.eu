@@ -51,6 +51,11 @@ install_bbin() {
             echo -n "to $HOME/.bashrc ..."
             echo "$modification" >> "$HOME/.bashrc"
             echo "Done!"
+            echo "Please run"
+            echo ""
+            echo "    source $HOME/.bashrc"
+            echo ""
+            echo "or restart your shell to run Babashka or bbin."
         elif [[ "$shell_name" == "zsh" ]]; then
             modification='export PATH="$HOME/.babashka/bbin/bin"'
 
@@ -62,6 +67,11 @@ install_bbin() {
             echo -n "to $HOME/.bashrc ..."
             echo "$modification" >> "$HOME/.bashrc"
             echo "Done!"
+            echo "Please run"
+            echo ""
+            echo "    source $HOME/.bashrc"
+            echo ""
+            echo "or restart your shell to run Babashka or bbin."
         else
             echo "Cannot decide what to do with your shell: $SHELL"
             echo "Please add \"$HOME/.babashka/bbin/bin\" to PATH manually."
