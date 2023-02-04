@@ -27,4 +27,5 @@ There are multiple dockerfiles.
 | ex1.dockerfile | Installs dependencies, installs bbup from web, sets up bbin and uses it |
 | ex2.dockerfile | Installs dependencies, prepares for local bbup installation             |
 | ex3.dockerfile | Like ex2 but with zsh default shell                                     |
+| ex4.dockerfile | Dependencies only.                                                      |
 
