@@ -40,11 +40,19 @@ install_bbin() {
     #
     # please install yourself!
 
+    ########################################
+    #
+    #  CHECK SHELL
+
     if [[ ":$PATH:" == *":$HOME/.babashka/bbin/bin:"* ]]; then
         # do nothing
         echo -n ""
     else
-        echo ""
+        shell_name=$(basename $SHELL)
+
+        echo "bbup detected that you are running ${shell_name}."
+
+
         if [[ "$(basename $SHELL)" == "bash" ]]; then
             echo "Would run:" "echo 'export PATH=\"$HOME/.babashka/bbin/bin\" >> $HOME/.bashrc"
         elif [[ "$(basename $SHELL)" == "zsh" ]]; then
