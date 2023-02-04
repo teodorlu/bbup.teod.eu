@@ -41,7 +41,7 @@ install_bbin() {
         #     :: Proceed with installation? [Y/n]
 
         if [[ "$shell_name" == "bash" ]]; then
-            modification='export PATH="$HOME/.babashka/bbin/bin"'
+            modification='export PATH="$HOME/.babashka/bbin/bin:$PATH"'
 
             echo "bbup has detected that you are running $shell_name"
             echo "Adding"
@@ -57,7 +57,7 @@ install_bbin() {
             echo ""
             echo "or restart your shell to run Babashka or bbin."
         elif [[ "$shell_name" == "zsh" ]]; then
-            modification='export PATH="$HOME/.babashka/bbin/bin"'
+            modification='export PATH="$HOME/.babashka/bbin/bin:$PATH"'
 
             echo "bbup has detected that you are running $shell_name"
             echo "Adding"
