@@ -19,6 +19,6 @@ RUN pacman -S git --noconfirm
 
 COPY bbup-install.sh bbup-install.sh
 
-RUN echo "cat bbup-install | sh" > bbup.txt
+RUN echo "cat bbup-install.sh | sh" > bbup.txt
 RUN echo '# source bbup.txt' >> bbup.txt
 RUN echo '# /root/.babashka/bbin/bin/bbin' >> bbup.txt
